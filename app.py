@@ -58,6 +58,10 @@ def delete_task(task_id):
     tasks = [t for t in tasks if t['id'] != task_id]
     return jsonify({'message': 'Task deleted'})
 
+@app.route('/', methods=['GET'])
+def inicio():
+    return render_template('index.html')
+
 
 
 if __name__ == '__main__':
